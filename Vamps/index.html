@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vamps</title>
     <link rel="stylesheet" href="styles/styles.css">
+
+
 </head>
 <body>
+    <div class="loader"></div>
+
+
     <div class="nav-bar">
         <a href="" class="circle">&#9711</a>
         <a href="" class="button">Button</a>
@@ -89,5 +94,19 @@
     <a href="" class="circle">&#9711</a>
     <a href="" class="button">Button</a>
 </div>
+
+
+
+<script> window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+  
+    loader.classList.add("loader--hidden");
+  
+    loader.addEventListener("transitionend", () => {
+      document.body.removeChild(loader);
+    });
+  });
+  
+  </script>
 </body>
 </html>
