@@ -23,7 +23,14 @@ color: white;
 font-size: 20px;
 text-decoration: none;
 padding: 0.3rem 0.5rem;
+transition: 0.7s;
 }
+
+.circle:hover{
+   transition: 0.7s;
+   transform: rotate(180deg);
+   background-color: rgb(85, 6, 6);
+   }
 .button{
     color: white;
     font-size: 14px;
@@ -31,8 +38,14 @@ padding: 0.3rem 0.5rem;
     background-color: black;
     padding: 0.4rem 3rem;
     border-radius: 13px;
+    transition: 0.5s;
 }
 
+.button:hover{
+   transform: scale(1.1);
+   transition: 0.5s;
+   background-color: rgb(85, 6, 6);
+}
 /* Text */
 
 .text h1{
@@ -171,6 +184,14 @@ Background-size:cover;
     border-radius: 50%;
     width: 25%;
     height:40vh ;
+    transition: 1s;
+ }
+ .second-section .circle-image:hover{
+   transform: rotatey(180deg);
+   transform-style: preserve-3d;
+   transition: 1s;
+   cursor: pointer;
+
  }
 
  .personal-info{
@@ -201,9 +222,17 @@ Background-size:cover;
     padding: 0.7rem 3rem;
     border-radius: 13px;
     width: 2.3em;
+    transition: 0.5s;
+  
    
  }
-
+.vamp-button:hover{
+   
+      transform: scale(1.1);
+      transition: 0.5s;
+      background-color: rgb(85, 6, 6);
+   
+}
 
  
  /* Third section */
@@ -214,7 +243,7 @@ Background-size:cover;
       color: white;
       font-size: 24px;
       font-weight: bold;
-      padding-top: 10rem;
+      margin-top: 10rem;
  }
  .third-section{
     display: flex;
@@ -239,6 +268,10 @@ height:40vh;
     width:10%;
     
     
+    
+  
+
+    
 }
  .third-section-arrows{
     display: flex;
@@ -255,8 +288,16 @@ height:40vh;
       margin-top: 3rem;
       padding: 0.8rem 0.01rem;
       border-radius: 50%;
+      transition: 0.5s;
      
  }
+
+ .third-section-arrows:hover{
+   transform: scale(0.9);
+   transition: 0.5s;
+   background-color: rgb(85, 6, 6);
+   cursor: pointer;
+}
 
  /* fourth section */
 
