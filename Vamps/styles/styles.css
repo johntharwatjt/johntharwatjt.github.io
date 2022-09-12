@@ -1,5 +1,5 @@
 body{
-background-color: rgb(40, 40, 41);
+   background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgba(0, 0, 0, 0.904) 99.4%);
 display: flex;
 flex-direction: column;
 }
@@ -82,7 +82,7 @@ height: 40vh;
 .first-section .first-col{
  display: flex;
 width: calc(100%/3.1);
-background-image: url("H:/Studies/Web_Journey/Pages-Clones/Flex-test/Vamps/assets/1.png");
+background-image: url("../assets/1.png");
 background:center cover;
 Background-size:cover;
 
@@ -111,7 +111,7 @@ Background-size:cover;
  }
 
     .second-col-firstRow-firstCol{
-        background-image: url("H:/Studies/Web_Journey/Pages-Clones/Flex-test/Vamps/assets/2.png");
+        background-image: url("../assets/2.png");
         background:center cover;
         Background-size:cover;
         width: 47%;
@@ -119,7 +119,7 @@ Background-size:cover;
     }
 
     .second-col-firstRow-secondCol{
-        background-image: url("H:/Studies/Web_Journey/Pages-Clones/Flex-test/Vamps/assets/3.png");
+        background-image: url("../assets/3.png");
         background:center cover;
         Background-size:cover;
         width: 47%;
@@ -129,7 +129,7 @@ Background-size:cover;
 
 
  .second-col-secondRow{
-    background-image: url("H:/Studies/Web_Journey/Pages-Clones/Flex-test/Vamps/assets/4.png");
+    background-image: url("../assets/4.png");
     background-position: center top 30%;
     Background-size:cover;
     
@@ -148,7 +148,7 @@ Background-size:cover;
  }
 
  .third-col-firstRow{
-    background-image: url("H:/Studies/Web_Journey/Pages-Clones/Flex-test/Vamps/assets/5.png");
+    background-image: url("../assets/5.png");
     background:center cover;
     Background-size:cover;
 
@@ -157,7 +157,7 @@ Background-size:cover;
  }
 
  .third-col-secondRow{
-    background-image: url("H:/Studies/Web_Journey/Pages-Clones/Flex-test/Vamps/assets/6.png");
+    background-image: url("../assets/6.png");
     background-position: center top 20%;
     Background-size:cover;
 
@@ -172,31 +172,31 @@ Background-size:cover;
     flex-direction: row;
     justify-content: space-evenly;
     width: 85%;
-    height: 40vh;
+   
     margin: auto;
     padding-top:8rem;
  }
 
  .second-section .circle-image{
-    background-image: url("H:/Studies/Web_Journey/Pages-Clones/Flex-test/Vamps/assets/7.png");
+    background-image: url("../assets/7.png");
    background-position: center ;
    Background-size:cover;
     border-radius: 50%;
-    width: 25%;
-    height:40vh ;
+    width: 22em;
+ 
     transition: 1s;
  }
  .second-section .circle-image:hover{
    transform: rotatey(180deg);
    transform-style: preserve-3d;
    transition: 1s;
-   cursor: pointer;
+  
 
  }
 
  .personal-info{
     width: 35%;
-    height:100%;
+
     display: flex;
     
    
@@ -265,11 +265,8 @@ height:40vh;
     justify-content: center;
     align-items: center;
     margin: auto;
-    width:10%;
     
-    
-    
-  
+    gap: 1em;
 
     
 }
@@ -283,10 +280,10 @@ height:40vh;
       font-size: 24px;
       font-weight: bold;
       background-color: black;
-      width: 35%;
+      
       
       margin-top: 3rem;
-      padding: 0.8rem 0.01rem;
+      padding: 1rem 1rem;
       border-radius: 50%;
       transition: 0.5s;
      
@@ -305,7 +302,7 @@ height:40vh;
  .fourth-section{
 display: flex;
 flex-direction: row;
-height: 40vh;
+
 margin: auto;
 border-radius: 10px;
 margin-top: 6rem;
@@ -318,18 +315,19 @@ background-color: black;
     flex-direction: column;
     justify-content: center;
     width: 60%;
+    padding: 2em;
     
 }
  .fourth-section h1 {
     font-size: 24px;
     color: white;
-    margin:2rem 20px;
+  
  }
 
  .fourth-section h2 {
     font-size: 22px;
     color: rgb(82, 81, 81);
-    margin:0rem 20px;
+   
  }
 
  .fourth-section-secondCol{
@@ -339,8 +337,46 @@ background-color: black;
    align-items: center;
     width: 40%;
 }
+ /* ---------------------------------------------------------------------------------------------------------------------- */
+ /* Loader */
+ /* ---------------------------------------------------------------------------------------------------------------------- */
 
-
+.loader {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+   transition: opacity 0.75s, visibility 0.75s;
+ }
+ 
+ .loader--hidden {
+   opacity: 0;
+   visibility: hidden;
+ }
+ 
+ .loader::after {
+   content: "";
+   width: 75px;
+   height: 75px;
+   border: 15px solid #dddddd;
+   border-top-color: #009578;
+   border-radius: 50%;
+   animation: loading 0.75s ease infinite;
+ }
+ 
+ @keyframes loading {
+   from {
+     transform: rotate(0turn);
+   }
+   to {
+     transform: rotate(1turn);
+   }
+ }
 
  /* ---------------------------------------------------------------------------------------------------------------------- */
  /* media queries */
@@ -415,22 +451,21 @@ background-color: black;
 .fourth-section{
     transition: ease all .5s;
     flex-direction: column;
-    height: 40vh;
+    
      }
     
-     .fourth-section-text{
-       padding-bottom: 2rem;
-        width: 100%;
-        
-
-}
-
+     .fourth-section .vamp-button{
+      margin-bottom: 2em;
+      
+       }
+      
+      
 
 
  }
 
 
- @media (max-width:1200px){
+ /* @media (max-width:1200px){
 
     .second-section .circle-image{
         width: 30%;
@@ -449,4 +484,4 @@ background-color: black;
     .third-section-title {
        padding-top: 20rem;
     }
-}
+} */
